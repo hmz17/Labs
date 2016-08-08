@@ -12,7 +12,7 @@ public class Main {
 	File file = new File("output.txt");
         FileOutputStream fis = new FileOutputStream(file);
         //Input from file
-	Scanner in = new Scanner(new File("planetext.txt"));
+	Scanner in = new Scanner(new File("input.txt"));
         PrintStream out = new PrintStream(fis);
         System.setOut(out);
 	//Main Program

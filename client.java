@@ -7,7 +7,7 @@ import java.util.*;
 
 class FTPClient
 {
-    publicstaticvoid main(String args[]) throws Exception
+public static void main(String args[]) throws Exception
     {
         Socket soc=new Socket("127.0.0.1",5217);
         transferfileClient t=new transferfileClient(soc);
@@ -35,7 +35,7 @@ class transferfileClient
         {
         }        
     }
-    void SendFile() throws Exception
+void SendFile() throws Exception
     {        
         
         String filename;
@@ -83,7 +83,7 @@ class transferfileClient
         
     }
     
-    void ReceiveFile() throws Exception
+void ReceiveFile() throws Exception
     {
         String fileName;
         System.out.print("Enter File Name :");
@@ -96,7 +96,7 @@ class transferfileClient
             System.out.println("File not found on Server ...");
             return;
         }
-        elseif(msgFromServer.compareTo("READY")==0)
+        else if(msgFromServer.compareTo("READY")==0)
         {
             System.out.println("Receiving File ...");
             File f=new File(fileName);
@@ -131,7 +131,7 @@ class transferfileClient
         
     }
 
-    publicvoid displayMenu() throws Exception
+public void displayMenu() throws Exception
     {
         while(true)
         {    
@@ -147,7 +147,7 @@ class transferfileClient
                 dout.writeUTF("SEND");
                 SendFile();
             }
-            elseif(choice==2)
+            else if(choice==2)
             {
                 dout.writeUTF("GET");
                 ReceiveFile();

@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 
-class FTPClient
+class client
 {
 public static void main(String args[]) throws Exception
     {
